@@ -2,7 +2,7 @@
 
 Companion repo for the Maven Lightning Lesson
 **[Debug Cursor Agent Failures Before Production](https://maven.com/p/2700ca/debug-cursor-agent-failures-before-production)**
-by [Carmelo Iaria](https://www.linkedin.com/in/carmeloiaria/) — Wed, Jun 10, 2026.
+by [Carmelo Iaria](https://maven.com/carmelo-iaria) — Wed, Jun 10, 2026.
 
 > **The promise:** in 10 minutes, take a Cursor agent that confidently fails,
 > run a 3-question triage live, and ship a hardened version. Same repo, same
@@ -127,7 +127,7 @@ rules, and resets `PLAN.md`.
 ## The Three-Layers Triage (the spine)
 
 This demo operationalises the framework from
-[*The Three-Layers Framework for Agentic Code Quality*](https://www.linkedin.com/pulse/three-layers-framework-agentic-code-quality-carmelo-iaria):
+[*The Three-Layers Framework for Agentic Code Quality*](https://maven.com/p/f532fa/the-three-layers-framework-for-agentic-code-quality?utm_medium=lead_magnet_share_link&utm_source=instructor):
 
 ```
 ┌─────────────────────────────────────────┐
