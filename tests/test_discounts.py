@@ -1,4 +1,4 @@
-"""RED test — the agent must make this pass by creating app/discounts.py.
+"""Discount test.
 
 Contract:
     apply_discount(subtotal: float, tier: str) -> float
@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import pytest
 
-# This import will fail until the agent creates app/discounts.py
 from app.discounts import apply_discount  # type: ignore
 
 
