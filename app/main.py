@@ -1,4 +1,4 @@
-"""FastAPI entrypoint. DO NOT MODIFY in the demo — agent must NOT touch this file."""
+"""FastAPI endpoint for quote calculations."""
 
 from __future__ import annotations
 
@@ -7,8 +7,6 @@ from pydantic import BaseModel
 
 from app.pricing import base_price, tier_for_subtotal
 
-# The agent must CREATE this module: app/discounts.py
-# It must expose: apply_discount(subtotal: float, tier: str) -> float
 try:
     from app.discounts import apply_discount  # type: ignore
 except ImportError:  # pragma: no cover - expected before the agent runs

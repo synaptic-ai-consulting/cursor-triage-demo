@@ -1,4 +1,4 @@
-"""Base pricing logic. DO NOT MODIFY in the demo — agent must NOT touch this file."""
+"""Base pricing logic."""
 
 from __future__ import annotations
 
