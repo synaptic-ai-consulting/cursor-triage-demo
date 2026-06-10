@@ -1,0 +1,25 @@
+[project]
+name = "cursor-triage-demo"
+version = "0.1.0"
+description = "Lightning Lesson demo — Debug Cursor Agent Failures Before Production"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110",
+  "pydantic>=2.5",
+  "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "httpx>=0.27",
+  "ruff>=0.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

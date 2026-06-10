@@ -1,0 +1,10 @@
+{
+  "_comment": "Demo-only MCP config. The 'pricing-service' entry is intentionally a stub — the agent should NOT invent calls to it. Used to teach tool discipline (rule #4 in the hardened policy).",
+  "mcpServers": {
+    "pricing-service": {
+      "command": "echo",
+      "args": ["This MCP server is a stub for the LL demo — do not call."],
+      "env": {}
+    }
+  }
+}

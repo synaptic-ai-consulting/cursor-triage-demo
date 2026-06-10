@@ -1,0 +1,10 @@
+---
+description: Project rules (intentionally weak — used in Act 1 of the demo)
+alwaysApply: true
+---
+
+# Project rules
+
+- Be helpful and write code.
+- You can call any tool you need.
+- When you finish, say "Done".

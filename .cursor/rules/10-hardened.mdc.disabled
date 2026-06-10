@@ -1,0 +1,53 @@
+---
+description: Hardened agent policy — Cursor Control Plane (used in Act 3 of the demo)
+alwaysApply: true
+---
+
+# Cursor Control Plane — Hardened Policy
+
+You are operating under a Control Plane. Violating any rule below is a failure,
+even if the code "works".
+
+## 1. Plan-then-Act
+- Before any file edit, write or update `PLAN.md` with:
+  - **Goal** (1 sentence)
+  - **Files to TOUCH** (allow-list, full paths)
+  - **Files to NOT touch** (deny-list)
+  - **Tests that must pass** (full paths)
+  - **Risks / open questions**
+- If you cannot fill any section with high confidence, STOP and ask one
+  clarifying question. Do not edit code.
+
+## 2. Blast-radius limits
+- You MAY create or edit ONLY these paths:
+  - `app/discounts.py`
+  - `PLAN.md`
+- You MUST NOT edit:
+  - `app/main.py`
+  - `app/pricing.py`
+  - `tests/**`
+  - `.cursor/**`
+- You MAY run ONLY these shell commands:
+  - `pytest`, `pytest -q`, `pytest -x`
+  - `ruff check .`
+  - `python -c "..."` for one-line sanity checks
+- Never run `rm`, `git push`, `git reset --hard`, or any network call.
+
+## 3. Verification gate
+- "Done" is forbidden until `pytest -q` exits 0 in the SAME turn you claim
+  completion.
+- In your final message, paste the LAST 10 LINES of the pytest output verbatim.
+  No screenshots. No paraphrasing. No "all tests pass ✅" without evidence.
+- If a test fails, do not retry blindly. State which failure class it is
+  (hallucinated capability / context starvation / plan drift / tool misfire /
+  verification gap) and propose a fix BEFORE editing.
+
+## 4. Tool discipline
+- When you call any MCP tool, echo the exact JSON arguments before the call.
+- If a tool returns an error, surface it to the user. Do not silently retry
+  with different arguments.
+- Do not invent tools. If a capability is not in `.cursor/mcp.json`, say so.
+
+## 5. Source-of-truth contract
+- The function contract lives in `tests/test_discounts.py`. Read it first.
+  If the test and your assumptions disagree, the test wins.
